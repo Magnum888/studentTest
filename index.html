@@ -70,8 +70,11 @@
             <div class="body-content">
                 <div class="list-students">
                     <div class="block-add-student">
-                        <button class="btn-add-student"><img src="images/plus16.png"><span>Добавить студента</span></button>
-                        <button class=btn-save-change><img src="images/tick.png"><span>Сохранить изменения</span></button>
+                        <button class="btn-add-student" form="added-person" onclick="validate(this.form)">
+                            <img src="images/plus16.png"><span>Добавить студента</span>
+                        </button>
+                        <button class=btn-save-change><img src="images/tick.png"><span>Сохранить изменения</span>
+                        </button>
                     </div>
                     <div class="roster-name-students">
                         <div class="name-one-student"><a href="#">константинопольский константин константинович</a></div>
@@ -125,7 +128,60 @@
                 <div class="student-block-info">
                     <div class="personal-info">
                         <span>Стандартные личные данные</span>
-                        <span class="ddf"><a>Удалить</a></span>
+                        <div><a href="#">Удалить</a></div>
+                    </div>
+                    <form id="added-person">
+                        <div>
+                            <p>Фамилия</p>
+                            <label class="left-blockform"><input type="text" name="surname" maxlength="23"></label>
+                        </div>
+                        <div>
+                            <p>Имя</p>
+                            <label class="left-blockform"><input type="text" name="username" maxlength="23"></label>
+                        </div>
+                        <div>
+                            <p>Отчество</p>
+                            <label class="left-blockform"><input type="text" name="secondname" maxlength="23"></label>
+                        </div>
+                        <div>
+                            <p>Пол</p>
+                            <label class="left-blockform"><input type="radio" name="male" value="daily"></label>
+                            <span>Мужской</span>
+                            <label class="left-blockform"><input type="radio" name="female" value="weekly"></label>
+                            <span>Женский</span>
+                        </div>
+                        <div>
+                            <p>Дата рождения</p>
+                            <label class="left-blockform d-img">
+                                <input type="text" placeholder="12.10.2012"
+                                       pattern="(0[1-9]|1[0-9]|2[0-9]|3[01]).(0[1-9]|1[012]).[0-9]{4}"
+                                       class="datepicker" name="birthday" value="12.10.2012" maxlength="10" />
+                                <img class="date-img" src="images/date.png">
+                            </label>
+                        </div>
+                        <div>
+                            <p>Дата поступления</p>
+                            <label class="left-blockform d-img">
+                                <input type="text" placeholder="12.10.2012"
+                                       pattern="(0[1-9]|1[0-9]|2[0-9]|3[01]).(0[1-9]|1[012]).[0-9]{4}"
+                                       class="datepicker" name="acceptance" value="12.10.2012" maxlength="10" />
+                                <img class="date-img" src="images/date.png">
+                            </label>
+                        </div>
+                    </form>
+                    <hr>
+                    <div class="subject-info">
+                        <div class="personal-info">
+                            <span>Списочек посещаемых предметов</span>
+                            <div><a href="#">Добавить предмет</a></div>
+                        </div>
+                        <div>
+                            <form>
+                                <fieldset>
+                                    <p><label>Кошка<input id="cat" type="checkbox"></label></p>
+                                </fieldset>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -140,3 +196,44 @@
 </body>
 </html>
 
+<script>
+    function showError(container, errorMessage) {
+        container.className = 'error';
+        var msgElem = document.createElement('span');
+        msgElem.className = "error-message";
+        msgElem.innerHTML = errorMessage;
+        container.appendChild(msgElem);
+    }
+
+    function resetError(container) {
+        container.className = '';
+        if (container.lastChild.className == "error-message") {
+            container.removeChild(container.lastChild);
+        }
+    }
+
+    function validate(form) {
+        var elems = form.elements;
+
+        resetError(elems.surname.parentNode);
+        if (!elems.surname.value) {
+            showError(elems.surname.parentNode, '  Поле Фамилия обязательно к заполнению');
+        }
+        resetError(elems.username.parentNode);
+        if (!elems.username.value) {
+            showError(elems.username.parentNode, '  Поле Имя обязательно к заполнению');
+        }
+        resetError(elems.secondname.parentNode);
+        if (!elems.secondname.value) {
+            showError(elems.secondname.parentNode, '  Поле Отчество обязательно к заполнению');
+        }
+        resetError(elems.birthday.parentNode);
+        if (!elems.birthday.value) {
+            showError(elems.birthday.parentNode, '  Поле Дата рождения обязательно к заполнению');
+        }
+        resetError(elems.acceptance.parentNode);
+        if (!elems.acceptance.value) {
+            showError(elems.acceptance.parentNode, '  Поле Дата поступления обязательно к заполнению');
+        }
+    }
+</script>
