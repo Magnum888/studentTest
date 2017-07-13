@@ -37,7 +37,8 @@ footer{
 }
 
 #container{
-    height: 1245px;
+    /*height: 1245px;*/
+    height: auto;
     max-width: 980px;
     margin: auto;
     background: #ffffff;
@@ -412,7 +413,8 @@ ul.submenu .submenu-pay-company{
 
 /*  body-content, student-block-info --personal-info-- */
 .student-block-info{
-    height: 1030px;
+    /*height: 1030px;*/
+    height: 100%;
     display: inline-block;
     width: 690px;
     background-color: #ffffff;
@@ -509,8 +511,52 @@ form#added-person input[name="secondname"]{
     margin-bottom: 20px;
     cursor: pointer;
 }
-.line-svg img{
+.line-div{
     width: 100%;
+}
+.line-div > div{
+    display: inline-block;
+    width: 9.3%;
+}
+.line-div :first-child,
+.line-div :nth-child(6){
+    padding-top: 14px;
+    border-left: 1px solid;
+}
+.line-div :last-child{
+    padding-top: 14px;
+    border-right: 1px solid;
+}
+.line-div :nth-child(9){
+    padding-top: 10px;
+    border-left: 1px solid;
+    border-right: 1px solid;
+}
+.line-div :nth-child(2),
+.line-div :nth-child(3),
+.line-div :nth-child(4),
+.line-div :nth-child(5),
+.line-div :nth-child(7),
+.line-div :nth-child(8){
+    padding-top: 10px;
+    border-left: 1px solid;
+}
+.scale-div{
+    width: 100%;
+}
+.scale-div :nth-child(3){
+    text-align: right;
+}
+.scale-div :nth-child(2){
+    text-align: center;
+}
+.line-scale{
+    font-size: 10px;
+    padding-top: 10px;
+    display: inline-block;
+    width: -webkit-calc(100% / 3 - 3px);
+    width: -moz-calc(100% / 3 - 3px);
+    width: calc(100% / 3 - 3px);
 }
 .info-circle{
     width: 400px;
