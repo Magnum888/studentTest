@@ -154,6 +154,10 @@ ul.submenu .submenu-pay-company{
     background-image: -o-linear-gradient(top, #FFD003, #FF9705);
     background-image: linear-gradient(to bottom, #FFD003, #FF9705);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#FFD003, endColorstr=#FF9705);
 }
+.submenu-other-company{
+    background-color: #ffffff;
+    width: 100%;
+}
 .submenu-other-company a{
     padding-left: 20px;
     text-decoration: none;
@@ -178,8 +182,14 @@ ul.submenu .submenu-pay-company{
     margin-bottom: 5px;
 }
 .management-companies{
-    padding-left: 20px;
-    margin-bottom: 5px;
+    /*padding-left: 20px;*/
+    /*margin-bottom: 5px;*/
+    /*width: 338px;*/
+    padding-bottom: 10px;
+    width: 100%;
+    background-color: #ffffff;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 .management-companies a{
     font-family: 'PTSansRegular', Arial, sans-serif;
@@ -187,4 +197,5 @@ ul.submenu .submenu-pay-company{
     color: #3072c4;
     text-decoration: none;
     text-overflow: clip;
+    padding-left: 20px;
 }
