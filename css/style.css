@@ -302,6 +302,7 @@ ul.submenu .submenu-pay-company{
 }
 .body-content{
     width: auto;
+    padding-right: 30px;
     /*height: 1090px;*/
 }
 .footer-content{
@@ -313,10 +314,10 @@ ul.submenu .submenu-pay-company{
 
 .list-students{
     width: 200px;
-    height: 100%;
+    /*height: 100%;*/
     float: left;
     overflow: hidden;
-    display: inline-block;
+    /*display: inline-block;*/
 }
 .block-add-student{
     height: 120px;
@@ -414,9 +415,11 @@ ul.submenu .submenu-pay-company{
 /*  body-content, student-block-info --personal-info-- */
 .student-block-info{
     /*height: 1030px;*/
-    height: 100%;
-    display: inline-block;
-    width: 690px;
+    margin-left: 200px;
+    padding-bottom: 56px;
+    /*height: 100%;*/
+    /*display: inline-block;*/
+    /*width: 690px;*/
     background-color: #ffffff;
     border-radius: 1px;
     padding-left: 30px;
@@ -428,6 +431,7 @@ ul.submenu .submenu-pay-company{
 .personal-info{
     padding-bottom: 25px;
     padding-top: 25px;
+    margin: 0;
 }
 .personal-info :first-child{
     font-family: 'PTSansRegular', Arial, sans-serif;
