@@ -20,8 +20,27 @@
 }
 
 @media print {
-    .btn-print{
-        display:none;
+    .btn-print button{
+        display: none;
+    }
+    .student-block-info{
+        width: 450px;
+        padding-bottom: 10px;
+        padding-top: 10px;
+    }
+    .subject-name{
+        width:auto;
+    }
+    .student-block-info hr {
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+    .list-students {
+        width: 200px;
+        height: 980px;
+        float: left;
+        overflow: hidden;
+        display: inline-block;
     }
 }
 .btn-print{
@@ -182,9 +201,6 @@ ul.submenu .submenu-pay-company{
     margin-bottom: 5px;
 }
 .management-companies{
-    /*padding-left: 20px;*/
-    /*margin-bottom: 5px;*/
-    /*width: 338px;*/
     padding-bottom: 10px;
     width: 100%;
     background-color: #ffffff;
