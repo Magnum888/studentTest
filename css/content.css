@@ -147,16 +147,18 @@
     width: 690px;
     background-color: #ffffff;
     border-radius: 1px;
-    padding: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
     -webkit-box-shadow: 2px 1px 1px 2px rgba(0,0,0,0.02);
     -moz-box-shadow: 2px 1px 1px 2px rgba(0,0,0,0.02);
     box-shadow: 2px 1px 1px 2px rgba(0,0,0,0.02);
 }
 .personal-info{
-    padding-bottom: 30px;
+    padding-bottom: 25px;
+    padding-top: 25px;
 }
 .personal-info :first-child{
-    font-family: 'PTSansBold', Arial, sans-serif;
+    font-family: 'PTSansRegular', Arial, sans-serif;
     font-size: 20px;
 }
 .personal-info :last-child{
@@ -174,47 +176,54 @@ form#added-person{
 form#added-person p{
     display: inline-block;
     margin: 0;
-    width: 130px;
+    width: 127px;
 }
-label.left-blockform{
+div.left-blockform{
     display: inline-block;
     border-radius: 2px 2px 2px 2px;
     -moz-border-radius: 2px 2px 2px 2px;
     -webkit-border-radius: 2px 2px 2px 2px;
 }
-label.left-blockform.d-img{
+div.left-blockform.d-img{
     background-color: #e2e2e2;
 }
 form#added-person > div{
     margin-top: 10px;
     margin-bottom: 10px;
 }
-label.left-blockform input[type="text"]{
-    width: 282px;
+form#added-person input[type="text"]{
+    width: 280px;
+    height: 22px;
 }
-label.left-blockform input.datepicker{
+form#added-person input.datepicker{
     width: 80px;
     border-radius: 1px 0px 1px 0px;
     -moz-border-radius: 1px 0px 1px 0px;
     -webkit-border-radius: 1px 0px 1px 0px;
 }
-label.left-blockform img.date-img{
+form#added-person img.date-img{
     vertical-align: text-bottom;
     padding-right: 5px;
 }
-label.left-blockform input[name="surname"],
-label.left-blockform input[name="username"],
-label.left-blockform input[name="secondname"]{
+form#added-person input[name="surname"],
+form#added-person input[name="username"],
+form#added-person input[name="secondname"]{
     border-radius: 3px;
 }
 .error input{
     border: 1px solid red;
+    background-color: #fff0f0;
 }
 .error {
     color: red;
 }
+.error p{
+    color: black;
+}
 /*  body-content student-block-info --subject-info--  */
 .student-block-info hr{
+    border-color: #f2f2f2;
+    opacity: 0.1;
     margin-top: 40px;
     margin-bottom: 40px;
 }

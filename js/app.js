@@ -18,22 +18,22 @@ function validate(form) {
 
     resetError(elems.surname.parentNode);
     if (!elems.surname.value) {
-        showError(elems.surname.parentNode, '  Поле Фамилия обязательно к заполнению');
+        showError(elems.surname.parentNode, '  Поле обязательно к заполнению');
     }
     resetError(elems.username.parentNode);
     if (!elems.username.value) {
-        showError(elems.username.parentNode, '  Поле Имя обязательно к заполнению');
+        showError(elems.username.parentNode, '  Поле бязательно к заполнению');
     }
     resetError(elems.secondname.parentNode);
     if (!elems.secondname.value) {
-        showError(elems.secondname.parentNode, '  Поле Отчество обязательно к заполнению');
+        showError(elems.secondname.parentNode, '  Поле обязательно к заполнению');
     }
     resetError(elems.birthday.parentNode);
     if (!elems.birthday.value) {
-        showError(elems.birthday.parentNode, '  Поле Дата рождения обязательно к заполнению');
+        showError(elems.birthday.parentNode, '  Поле обязательно к заполнению');
     }
     resetError(elems.acceptance.parentNode);
     if (!elems.acceptance.value) {
-        showError(elems.acceptance.parentNode, '  Поле Дата поступления обязательно к заполнению');
+        showError(elems.acceptance.parentNode, '  Поле обязательно к заполнению');
     }
 }
