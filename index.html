@@ -6,9 +6,7 @@
     <link href="css/style.css" rel="stylesheet">
     <link href="css/content.css" rel="stylesheet">
     <link href="css/header.css" rel="stylesheet">
-    <link rel="import" href="app/header.html">
-    <link rel="import" href="app/content.html">
-    <link rel="import" href="app/footer.html">
+    <script src="js/app.js"></script>
 </head>
 <body>
 <!--block Header-->
@@ -77,7 +75,7 @@
                         </button>
                     </div>
                     <div class="roster-name-students">
-                        <div class="name-one-student"><a href="#">константинопольский константин константинович</a></div>
+                        <div class="name-one-student active">константинопольский константин константинович</div>
                         <div class="name-one-student">беляев владимир васильович</div>
                         <div class="name-one-student">бёрдов дмитрий александрович</div>
                         <div class="name-one-student">берестова екатерина владимировна</div>
@@ -244,11 +242,6 @@
                                         </g>
                                     </svg>
                                 </div>
-
-
-
-
-
                             </form>
                         </div>
                     </div>
@@ -264,45 +257,3 @@
 <!--end block Footer-->
 </body>
 </html>
-
-<script>
-    function showError(container, errorMessage) {
-        container.className = 'error';
-        var msgElem = document.createElement('span');
-        msgElem.className = "error-message";
-        msgElem.innerHTML = errorMessage;
-        container.appendChild(msgElem);
-    }
-
-    function resetError(container) {
-        container.className = '';
-        if (container.lastChild.className == "error-message") {
-            container.removeChild(container.lastChild);
-        }
-    }
-
-    function validate(form) {
-        var elems = form.elements;
-
-        resetError(elems.surname.parentNode);
-        if (!elems.surname.value) {
-            showError(elems.surname.parentNode, '  Поле Фамилия обязательно к заполнению');
-        }
-        resetError(elems.username.parentNode);
-        if (!elems.username.value) {
-            showError(elems.username.parentNode, '  Поле Имя обязательно к заполнению');
-        }
-        resetError(elems.secondname.parentNode);
-        if (!elems.secondname.value) {
-            showError(elems.secondname.parentNode, '  Поле Отчество обязательно к заполнению');
-        }
-        resetError(elems.birthday.parentNode);
-        if (!elems.birthday.value) {
-            showError(elems.birthday.parentNode, '  Поле Дата рождения обязательно к заполнению');
-        }
-        resetError(elems.acceptance.parentNode);
-        if (!elems.acceptance.value) {
-            showError(elems.acceptance.parentNode, '  Поле Дата поступления обязательно к заполнению');
-        }
-    }
-</script>

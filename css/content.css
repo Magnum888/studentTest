@@ -81,17 +81,38 @@
     margin-left: 20px;
     overflow: auto;
     height: 100%;
-    width: 100%;
+    width: 180px;
+}
+.name-one-student.active{
+    height: 20px;
+    font-family: 'PTSansBold', Arial, sans-serif;
+    font-size: 14px;
+    color: black;
+    text-decoration: none;
+    background-color: white;
+    position: inherit;
+    border-radius: 3px 0px 0px 3px;
+    -moz-border-radius: 3px 0px 0px 3px;
+    -webkit-border-radius: 3px 0px 0px 3px;
+    border-bottom: 1px solid #cfcfcf;
+    border-left: 1px solid #cfcfcf;
+    border-top: 1px solid #cfcfcf;
+    -webkit-box-shadow: inset -90px 6px 15px 15px rgba(255,255,255,1);
+    -moz-box-shadow: inset -90px 6px 15px 15px rgba(255,255,255,1);
+    box-shadow: inset -90px 6px 15px 15px rgba(255,255,255,1);
 }
 .roster-name-students > div{
-    height: 32px;
+    height: 20px;
     text-transform: capitalize;
     white-space: nowrap;
     overflow: hidden;
     text-decoration: underline;
     color: #007dcd;
-    margin-left: 10px;
     position: relative;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 .roster-name-students > div:after{
     content: '';
