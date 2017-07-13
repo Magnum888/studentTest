@@ -563,7 +563,7 @@ form#added-person input[name="secondname"]{
     width: calc(100% / 3 - 3px);
 }
 .info-circle{
-    width: 400px;
+    width: 350px;
     margin: 0 auto;
 }
 .info-circle circle{
